@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const todoController = require('./controllers/todoController');
+const PORT = process.env.PORT || 3000;
 
 //routes api
 app.use(express.json());
@@ -19,7 +20,7 @@ app.delete('/todos/:id',todoController.deleteTodoById);
 app.get('/todos/:id', todoController.getTodoById);
 
 //listener
-app.listen(3000, function () {
+app.listen(PORT, function () {
   console.log('Server has started to run');
   mongoose.connect(process.env.DB_URL)
   .then(function(){
