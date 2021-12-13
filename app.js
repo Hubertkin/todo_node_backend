@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3000;
 //routes api
 app.use(express.json());
 
+app.get('/',function(req,res){
+  res.status(200).json({message: 'Welcome to Hubert\'s todo api'})
+});
+
 app.get('/todos', todoController.getAllTodo);
 
 app.post('/todos', todoController.addTodo);
