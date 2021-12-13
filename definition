@@ -1,0 +1,5 @@
+NVC
+models - helps to connect to the database
+controller - the logic of ur whole application
+view - clients
+request parameters - addition infos that  u want to send to ur endpoint or url

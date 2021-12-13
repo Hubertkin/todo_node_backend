@@ -1,0 +1,22 @@
+{
+  "name": "node_application",
+  "version": "1.0.0",
+  "description": "A basic node application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon express_server.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "King",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
