@@ -5,13 +5,9 @@ const app = express();
 const mongoose = require('mongoose');
 const todoController = require('./controllers/todoController');
 const PORT = process.env.PORT || 3000;
-var cors = require("cors");
-
 
 //routes api
 app.use(express.json());
-
-app.use(cors());
 
 app.get('/',function(req,res){
   res.status(200).json({message: 'Welcome to Hubert\'s todo api'})
