@@ -32,8 +32,9 @@ async function addTodo(req , res){
  async function updateTodoById(req,res){
      const todoId = req.params.id;
      const body = req.body;
+     const isCompleted = body.isCompleted;
      try {
-          await Todo.findByIdAndUpdate(todoId , body);
+          await Todo.findByIdAndUpdate(todoId , {isCompleted});
          res.status(200).json({message: 'Todo is updated'})
          
      } catch (error) {
