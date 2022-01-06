@@ -6,11 +6,7 @@ async function addTodo(req , res){
         const title = body.title;
         const description = body.description;
         const deadline = Date(body.deadline);
-      const newTodo = await Todo.create({
-        title,
-        description,
-        deadline
-      });
+      const newTodo = await Todo.create(body);
       res.status(200).json(newTodo);
     }catch(error){
         console.log('can\'t add Data: ',error.message);
